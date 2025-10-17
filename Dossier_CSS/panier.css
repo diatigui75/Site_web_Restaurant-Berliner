@@ -1,0 +1,295 @@
+ /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .grand_section {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            color: #ff6b00;
+            font-size: 24px;
+        }
+        header p {
+            color: #666;
+            font-size: 14px;
+        }
+        .panier-btn {
+            background-image: url('../Dossier_images/panier.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            float: right;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #ff6b00;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .selected {
+            background-color: #ff6a0086;
+        }
+        .kebab-options, .side-options, .drink-options, .extra-options, .sauce-options, .sauce-kebab-options, .sauce-frites-options, .frites-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .kebab-option, .side-option, .drink-option, .extra-option, .sauce-option, .frites-option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+        }
+        .kebab-option h3, .side-option h3, .drink-option h3, .extra-option h3, .sauce-option h3, .frites-option h3 {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .drink-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        }
+
+        .drink-option {
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+        }
+         .extra-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        }
+
+        .extra-option {
+            flex: 1 1 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .commentaire {
+            margin-top: 6px;
+            padding: 10px;
+            background-color: white;
+            border-left: 4px solid #ff6600;
+            font-style: italic;
+            color: black;
+            border-radius: 4px;
+            font-size: 14px;
+            vertical-align: top;
+            width: 60%;
+            box-sizing: border-box;
+        }
+        .option-content {
+            flex: 1;
+            text-align: left;
+        }
+        .price {
+            font-size: 15px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        .total {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .total p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b00;
+        }
+        .total button {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            border-radius: 1px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .total button:hover {
+            background-color: #e65e00;
+        }
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+        .total-row p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        .total-row button {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .total-row button:hover {
+            background-color: #e65e00;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .modal-content .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+        h3 {
+            text-align: center;
+            color: #e65e00;
+            font-size: 25px;
+        }
+        .cart-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .cart-item p {
+            margin: 8px 0;
+        }
+        .cart-item strong {
+            color: #e65e00;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .quantity-controls button {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .quantity-controls input {
+            width: 50px;
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .btn-remove {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .cart-total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #ff6600;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .resume-panier-container,
+            .modal-content {
+                width: 95%;
+                margin: 10px auto;
+            }
+        }
+        .selected {
+            background-color: #ff6a0086;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .resume-panier-container,
+            .modal-content {
+                width: 95%;
+                margin: 10px auto;
+            }
+        }

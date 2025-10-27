@@ -1,309 +1,274 @@
-<<<<<<< HEAD
-/* ==========================
+/* =============================================
    RESET & BASE STYLES
-========================== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: whitesmoke;
-}
-section {
-  scroll-margin-top: 90px; /* adapte la valeur à la hauteur de ton header */
+   ============================================= */
+* {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale */
 }
 
-/* ==========================
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+    margin: 0; /* Pas de marge */
+    padding: 0; /* Pas de padding */
+    color: #333; /* Couleur de texte par défaut */
+    line-height: 1.6; /* Espacement entre les lignes */
+    background-color: whitesmoke; /* Fond clair */
+}
+
+section {
+    scroll-margin-top: 90px; /* Espace pour le header fixe */
+}
+
+/* =============================================
    UTILITIES & ANIMATIONS
-========================== */
+   ============================================= */
 .oval-popup {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #4CAF50;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    opacity: 0;
-    animation: fadeInOut 3s forwards;
+    position: fixed; /* Position fixe sur la page */
+    top: 20px; /* En haut */
+    right: 20px; /* À droite */
+    background: #4CAF50; /* Fond vert */
+    color: white; /* Texte blanc */
+    padding: 12px 25px; /* Espacement interne */
+    border-radius: 50px; /* Forme ovale */
+    font-weight: bold; /* Texte en gras */
+    font-size: 14px; /* Taille du texte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    z-index: 9999; /* Au-dessus des autres éléments */
+    opacity: 0; /* Invisible par défaut */
+    animation: fadeInOut 3s forwards; /* Animation d'apparition/disparition */
 }
 
 @keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(-20px); }
-    10% { opacity: 1; transform: translateY(0); }
-    80% { opacity: 1; }
-    100% { opacity: 0; transform: translateY(-20px); }
+    0% { opacity: 0; transform: translateY(-20px); } /* Début : invisible et décalé */
+    10% { opacity: 1; transform: translateY(0); } /* Apparition */
+    80% { opacity: 1; } /* Reste visible */
+    100% { opacity: 0; transform: translateY(-20px); } /* Disparition */
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translateX(0); } /* Début : position initiale */
+    100% { transform: translateX(-50%); } /* Fin : défilement vers la gauche */
 }
 
-/* ==========================
+/* =============================================
    HEADER & NAVIGATION
-========================== */
+   ============================================= */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    display: flex; /* Affichage flexible */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Centrage vertical */
+    padding: 15px 5%; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombre légère */
+    position: fixed; /* Position fixe */
+    top: 0; /* En haut de la page */
+    left: 0; /* À gauche */
+    right: 0; /* À droite */
+    z-index: 1000; /* Au-dessus du contenu */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Centrage vertical */
 }
 
 .logo img {
-    width: 70px;
-    height: 80px;
-    margin-right: 10px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 70px; /* Largeur */
+    height: 80px; /* Hauteur */
+    margin-right: 10px; /* Espacement à droite */
+    border-radius: 50%; /* Forme ronde */
+    object-fit: cover; /* Remplit l'espace */
 }
 
 .logo h1 {
-    color: #2c3e50;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-=======
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-}
-
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: whitesmoke;
-    color: #000;
-    position: relative;
-}
-
-header nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.logo {
-    background-image: url('../Dossier_images/Berliner.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 50px;
->>>>>>> 71df9fe (Ajout du site web fini)
+    color: #2c3e50; /* Couleur bleu foncé */
+    font-size: 24px; /* Taille du texte */
+    font-weight: 700; /* Texte en gras */
+    margin: 0; /* Pas de marge */
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-<<<<<<< HEAD
-    margin: 0;
-    padding: 0;
-=======
->>>>>>> 71df9fe (Ajout du site web fini)
+    display: flex; /* Affichage flexible */
+    list-style: none; /* Pas de puces */
+    margin: 0; /* Pas de marge */
+    padding: 0; /* Pas de padding */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espacement horizontal */
 }
 
 nav ul li a {
-    text-decoration: none;
-<<<<<<< HEAD
-    color: #2c3e50;
-    font-weight: 600;
-    font-size: 17px;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Pas de soulignement */
+    color: #2c3e50; /* Couleur bleu foncé */
+    font-weight: 600; /* Texte en gras */
+    font-size: 17px; /* Taille du texte */
+    transition: color 0.3s ease; /* Transition douce */
 }
 
 nav ul li a:hover {
-    color: #e74c3c;
+    color: #e74c3c; /* Couleur rouge au survol */
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Centrage vertical */
+    gap: 15px; /* Espacement entre les éléments */
 }
 
 .cta-button1, .cta-button {
-    color: #fff;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    color: #fff; /* Texte blanc */
+    padding: 10px 16px; /* Espacement interne */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 30px; /* Coins arrondis */
+    font-weight: 600; /* Texte en gras */
+    transition: all 0.3s ease; /* Transition douce */
 }
 
 .cta-button1 {
-    background-color: rgba(255, 166, 0, 0.764);
-    font-size: 14px;
+    background-color: rgba(255, 166, 0, 0.764); /* Fond orange */
+    font-size: 14px; /* Taille du texte */
 }
 
 .cta-button {
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* Fond rouge */
 }
 
-/* ==========================
+/* =============================================
    SLIDESHOW (HERO SECTION)
-========================== */
+   ============================================= */
 main {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: 70px; /* Espace pour le header fixed */
+    position: relative; /* Position relative */
+    height: 100vh; /* Hauteur totale de la fenêtre */
+    overflow: hidden; /* Cache le contenu dépassant */
+    margin-top: 70px; /* Espace pour le header fixe */
 }
 
 .slideshow-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    position: absolute; /* Position absolue */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    top: 0; /* En haut */
+    left: 0; /* À gauche */
+    z-index: 1; /* Sous le contenu */
 }
 
 .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+    position: absolute; /* Position absolue */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 1.2s ease-in-out; /* Transition douce */
 }
 
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    object-fit: cover; /* Remplit l'espace */
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    width: 85%;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute; /* Position absolue */
+    top: 50%; /* Au milieu verticalement */
+    left: 50%; /* Au milieu horizontalement */
+    transform: translate(-50%, -50%); /* Centrage parfait */
+    text-align: center; /* Alignement du texte au centre */
+    z-index: 2; /* Au-dessus des slides */
+    width: 85%; /* Largeur relative */
+    color: #fff; /* Texte blanc */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 3.5rem; /* Taille du titre */
+    font-weight: 700; /* Texte en gras */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    font-weight: bold;
+    font-size: 1.3rem; /* Taille du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 30px; /* Espacement en bas */
+    font-weight: bold; /* Texte en gras */
 }
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Affichage flexible */
+    justify-content: center; /* Centrage horizontal */
+    gap: 20px; /* Espacement entre les boutons */
 }
 
 .button {
-    padding: 14px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    padding: 14px 30px; /* Espacement interne */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 30px; /* Coins arrondis */
+    font-weight: 600; /* Texte en gras */
+    transition: all 0.3s ease; /* Transition douce */
 }
 
 .button.primary {
-    background-color: #e74c3c;
-    color: #fff;
-    border: 2px solid #e74c3c;
+    background-color: #e74c3c; /* Fond rouge */
+    color: #fff; /* Texte blanc */
+    border: 2px solid #e74c3c; /* Bordure rouge */
 }
 
 .button.primary:hover {
-    background-color: transparent;
-    color: #e74c3c;
-    transform: translateY(-3px);
+    background-color: transparent; /* Fond transparent au survol */
+    color: #e74c3c; /* Texte rouge au survol */
+    transform: translateY(-3px); /* Effet de soulèvement */
 }
 
 .button.secondary {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Texte blanc */
+    border: 2px solid #fff; /* Bordure blanche */
 }
 
 .button.secondary:hover {
-    background-color: #fff;
-    color: #2c3e50;
+    background-color: #fff; /* Fond blanc au survol */
+    color: #2c3e50; /* Texte bleu foncé au survol */
 }
 
-/* CSS spécifique pour la modale ovale de rendez-vous */
+/* =============================================
+   MODAL (Fenêtre de rendez-vous)
+   ============================================= */
 #rendezVousModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+    display: none; /* Masquée par défaut */
+    position: fixed; /* Position fixe */
+    top: 0; /* En haut */
+    left: 0; /* À gauche */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 2000; /* Au-dessus de tout */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
 }
 
 #rendezVousModal .modal-content {
-    background: white;
-    width: 90%;
-    max-width: 600px;
+    background: white; /* Fond blanc */
+    width: 90%; /* Largeur relative */
+    max-width: 600px; /* Largeur maximale */
     border-radius: 80px; /* Forme ovale */
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
+    padding: 2.5rem; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    position: relative; /* Position relative */
+    overflow: hidden; /* Cache le contenu dépassant */
 }
 
 #rendezVousModal h2 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    color: #2c3e50; /* Couleur bleu foncé */
+    font-size: 2rem; /* Taille du titre */
+    margin-bottom: 1.5rem; /* Espacement en bas */
+    font-weight: 700; /* Texte en gras */
 }
 
 #rendezVousModal .form-group {
-    margin-bottom: 1.2rem;
-    display: flex;
-    gap: 1rem;
+    margin-bottom: 1.2rem; /* Espacement en bas */
+    display: flex; /* Affichage flexible */
+    gap: 1rem; /* Espacement entre les éléments */
 }
 
 #rendezVousModal .form-group input[type="text"],
@@ -312,13 +277,13 @@ main {
 #rendezVousModal .form-group select,
 #rendezVousModal .form-group input[type="date"],
 #rendezVousModal .form-group input[type="time"] {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
+    flex: 1; /* Largeur flexible */
+    padding: 12px 15px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 25px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
+    background-color: #f9f9f9; /* Fond gris clair */
+    transition: border-color 0.3s; /* Transition douce */
 }
 
 #rendezVousModal .form-group input[type="text"]:focus,
@@ -327,1193 +292,683 @@ main {
 #rendezVousModal .form-group select:focus,
 #rendezVousModal .form-group input[type="date"]:focus,
 #rendezVousModal .form-group input[type="time"]:focus {
-    border-color: #3498db;
-    outline: none;
+    border-color: #3498db; /* Bordure bleue au focus */
+    outline: none; /* Pas de contour */
 }
 
 #rendezVousModal select[name="type_rdv"] {
-    width: 100%;
-    padding: 12px;
-    border-radius: 25px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    width: 100%; /* Largeur totale */
+    padding: 12px; /* Espacement interne */
+    border-radius: 25px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Fond gris clair */
+    border: 1px solid #ddd; /* Bordure légère */
 }
 
 #rendezVousModal textarea[name="motif"] {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    min-height: 100px;
-    resize: vertical;
-    background-color: #f9f9f9;
-    margin-bottom: 1.5rem;
+    width: 100%; /* Largeur totale */
+    padding: 12px 15px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 25px; /* Coins arrondis */
+    min-height: 100px; /* Hauteur minimale */
+    resize: vertical; /* Redimensionnement vertical uniquement */
+    background-color: #f9f9f9; /* Fond gris clair */
+    margin-bottom: 1.5rem; /* Espacement en bas */
 }
 
 #rendezVousModal .confirm-button {
-    background-color: #1E90FF;
-    color: white;
-    border: none;
-    padding: 14px 40px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    display: block;
+    background-color: #1E90FF; /* Fond bleu */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 14px 40px; /* Espacement interne */
+    font-size: 16px; /* Taille du texte */
+    font-weight: 600; /* Texte en gras */
+    border-radius: 50px; /* Forme ovale */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: all 0.3s ease; /* Transition douce */
+    width: 100%; /* Largeur totale */
+    max-width: 300px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    display: block; /* Affichage en bloc */
 }
 
 #rendezVousModal .confirm-button:hover {
-    background-color: #0066cc;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
+    background-color: #0066cc; /* Fond bleu plus foncé au survol */
+    transform: translateY(-2px); /* Effet de soulèvement */
+    box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4); /* Ombre au survol */
 }
 
 #rendezVousModal .close-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #777;
-    cursor: pointer;
-    transition: color 0.3s;
+    position: absolute; /* Position absolue */
+    top: 15px; /* En haut */
+    right: 20px; /* À droite */
+    font-size: 40px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #777; /* Couleur grise */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: color 0.3s; /* Transition douce */
 }
 
 #rendezVousModal .close-modal:hover {
-    color: #e74c3c;
+    color: #e74c3c; /* Couleur rouge au survol */
 }
 
-/* Animation pour l'apparition de la modale */
+/* Animation pour la modale */
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.95); } /* Début : invisible et réduit */
+    to { opacity: 1; transform: scale(1); } /* Fin : visible et taille normale */
 }
 
 #rendezVousModal .modal-content {
-    animation: modalFadeIn 0.4s ease-out forwards;
+    animation: modalFadeIn 0.4s ease-out forwards; /* Animation d'apparition */
 }
 
-/* Style pour le placeholder des inputs */
+/* Style pour les placeholders */
 #rendezVousModal ::placeholder {
-    color: #aaa;
-    opacity: 1;
+    color: #aaa; /* Couleur grise pour les placeholders */
+    opacity: 1; /* Opacité totale */
 }
 
 /* Style pour les inputs de type date et time */
 #rendezVousModal input[type="date"],
 #rendezVousModal input[type="time"] {
-    padding: 12px;
+    padding: 12px; /* Espacement interne */
 }
 
 #rendezVousModal input[type="date"]::-webkit-calendar-picker-indicator,
 #rendezVousModal input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.5);
-    padding: 4px;
-    cursor: pointer;
+    filter: invert(0.5); /* Inversion de couleur pour l'icône */
+    padding: 4px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
 }
 
-
-/* ==========================
+/* =============================================
    GALERIE PROJETS
-========================== */
+   ============================================= */
 .galerie-projets {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin: 80px auto 0;
-    max-width: 1600px;
-    padding: 0 20px;
+    display: grid; /* Affichage en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px; /* Espacement entre les éléments */
+    margin: 80px auto 0; /* Espacement en haut et centrage horizontal */
+    max-width: 1600px; /* Largeur maximale */
+    padding: 0 20px; /* Espacement interne horizontal */
 }
 
 .carte-projet {
-    height: 300px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    background-size: cover !important;
-    background-position: center !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    margin: 0 auto;
+    height: 300px; /* Hauteur fixe */
+    width: 100%; /* Largeur totale */
+    max-width: 400px; /* Largeur maximale */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache le contenu dépassant */
+    position: relative; /* Position relative */
+    background-size: cover !important; /* Remplit l'espace */
+    background-position: center !important; /* Centrage de l'image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease; /* Transition douce */
+    cursor: pointer; /* Curseur en forme de main */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
 .carte-projet:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Effet de soulèvement au survol */
 }
 
 .infos-projet {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 1.5rem;
-    color: white;
-    text-align: center;
-    width: 80%;
-    max-width: 300px;
+    position: absolute; /* Position absolue */
+    top: 50%; /* Au milieu verticalement */
+    left: 50%; /* Au milieu horizontalement */
+    transform: translate(-50%, -50%); /* Centrage parfait */
+    z-index: 2; /* Au-dessus de l'image */
+    padding: 1.5rem; /* Espacement interne */
+    color: white; /* Texte blanc */
+    text-align: center; /* Alignement du texte au centre */
+    width: 80%; /* Largeur relative */
+    max-width: 300px; /* Largeur maximale */
 }
 
 .infos-projet h3 {
-    margin: 0 0 10px;
-    font-size: 2rem;
+    margin: 0 0 10px; /* Espacement en bas */
+    font-size: 2rem; /* Taille du titre */
 }
 
 .bouton-projet {
-    background: transparent;
-    color: white;
-    border: none;
-    padding: 9px 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s;
-    font-size: 17px;
+    background: transparent; /* Fond transparent */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 9px 20px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
+    font-weight: 600; /* Texte en gras */
+    transition: background 0.3s; /* Transition douce */
+    font-size: 17px; /* Taille du texte */
 }
 
 .bouton-projet:hover {
-    background: #2980b9;
+    background: #2980b9; /* Fond bleu au survol */
 }
 
-
-/* ==========================
+/* =============================================
    CARROUSEL SECTION
-========================== */
+   ============================================= */
 .carousel-section {
-    padding: 40px 5%;
-    text-align: center;
-    background-color: #fff;
+    padding: 40px 5%; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    background-color: #fff; /* Fond blanc */
 }
 
 .carousel-section h2 {
-    font-size: 2.5rem;
-    color: #115da9;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Taille du titre */
+    color: #115da9; /* Couleur bleu */
+    font-weight: 700; /* Texte en gras */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .carousel-section p {
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 20px; /* Taille du texte */
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 10px; /* Espacement en haut */
 }
 
 .carousel-container {
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
-    margin: 0 auto;
+    width: 100%; /* Largeur totale */
+    max-width: 1200px; /* Largeur maximale */
+    overflow: hidden; /* Cache le contenu dépassant */
+    position: relative; /* Position relative */
+    padding: 20px 0; /* Espacement interne vertical */
+    margin: 0 auto; /* Centrage horizontal */
 }
 
 .carousel-track {
-    display: flex;
-    gap: 25px;
-    padding-bottom: 20px;
-    animation: scroll 30s linear infinite;
+    display: flex; /* Affichage flexible */
+    gap: 25px; /* Espacement entre les éléments */
+    padding-bottom: 20px; /* Espacement en bas */
+    animation: scroll 30s linear infinite; /* Animation de défilement */
 }
 
 .carousel-track:hover {
-    animation-play-state: paused;
+    animation-play-state: paused; /* Pause l'animation au survol */
 }
 
 .card {
-    flex: 0 0 400px;
-    height: 400px;
-    border-radius: 15px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
-    cursor: pointer;
+    flex: 0 0 400px; /* Largeur fixe */
+    height: 400px; /* Hauteur fixe */
+    border-radius: 15px; /* Coins arrondis */
+    background-size: cover; /* Remplit l'espace */
+    background-position: center; /* Centrage de l'image */
+    position: relative; /* Position relative */
+    overflow: hidden; /* Cache le contenu dépassant */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre légère */
+    transition: all 0.4s ease; /* Transition douce */
+    cursor: pointer; /* Curseur en forme de main */
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px); /* Effet de soulèvement au survol */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Ombre plus marquée au survol */
 }
 
 .card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: white;
-    padding: 25px 20px 20px;
-    text-align: center;
+    position: absolute; /* Position absolue */
+    bottom: 0; /* En bas */
+    left: 0; /* À gauche */
+    right: 0; /* À droite */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); /* Dégradé */
+    color: white; /* Texte blanc */
+    padding: 25px 20px 20px; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
 }
 
 .card-overlay h3 {
-    margin: 0 0 10px;
-    font-size: 1.4rem;
-    font-weight: 600;
+    margin: 0 0 10px; /* Espacement en bas */
+    font-size: 1.4rem; /* Taille du titre */
+    font-weight: 600; /* Texte en gras */
 }
 
 .card-overlay p {
-    margin: 0;
-    font-size: 0.95rem;
-    opacity: 0.9;
+    margin: 0; /* Pas de marge */
+    font-size: 0.95rem; /* Taille du texte */
+    opacity: 0.9; /* Légère transparence */
 }
 
-/* ==========================
+/* =============================================
    HISTORY SECTION
-========================== */
+   ============================================= */
 .history-section {
-    padding: 40px 5%;
-    background-color: whitesmoke;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
+    padding: 40px 5%; /* Espacement interne */
+    background-color: whitesmoke; /* Fond gris clair */
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Centrage vertical */
+    justify-content: space-between; /* Espacement entre les éléments */
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    gap: 50px; /* Espacement entre les éléments */
 }
 
 .history-content {
-    flex: 1;
-    max-width: 600px;
+    flex: 1; /* Largeur flexible */
+    max-width: 600px; /* Largeur maximale */
 }
 
 .history-content h2 {
-    font-size: 2.5rem;
-    color: #115da9;
-    margin-bottom: 25px;
-    font-weight: 700;
+    font-size: 2.5rem; /* Taille du titre */
+    color: #115da9; /* Couleur bleu */
+    margin-bottom: 25px; /* Espacement en bas */
+    font-weight: 700; /* Texte en gras */
 }
 
 .history-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 1.1rem; /* Taille du texte */
+    color: #555; /* Couleur du texte */
+    line-height: 1.7; /* Espacement entre les lignes */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .history-stats {
-    flex: 0 0 400px;
-    margin-top: 50px;
+    flex: 0 0 400px; /* Largeur fixe */
+    margin-top: 50px; /* Espacement en haut */
 }
 
 .stats-card {
-    background-color: #e8f4f8;
-    border-radius: 20px;
-    padding: 40px 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: #e8f4f8; /* Fond bleu clair */
+    border-radius: 20px; /* Coins arrondis */
+    padding: 40px 30px; /* Espacement interne */
+    display: grid; /* Affichage en grille */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 30px; /* Espacement entre les éléments */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombre légère */
 }
 
 .stat-item {
-    text-align: center;
+    text-align: center; /* Alignement du texte au centre */
 }
 
 .stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+    display: block; /* Affichage en bloc */
+    font-size: 2.5rem; /* Taille du nombre */
+    font-weight: 700; /* Texte en gras */
+    margin-bottom: 8px; /* Espacement en bas */
 }
 
-.stat-number.blue { color: #3498db; }
-.stat-number.purple { color: #9b59b6; }
-.stat-number.green { color: #27ae60; }
-.stat-number.orange { color: #f39c12; }
+.stat-number.blue { color: #3498db; } /* Couleur bleue */
+.stat-number.purple { color: #9b59b6; } /* Couleur violette */
+.stat-number.green { color: #27ae60; } /* Couleur verte */
+.stat-number.orange { color: #f39c12; } /* Couleur orange */
 
 .stat-label {
-    display: block;
-    font-size: 1rem;
-    color: #2c3e50;
-    font-weight: 500;
+    display: block; /* Affichage en bloc */
+    font-size: 1rem; /* Taille du texte */
+    color: #2c3e50; /* Couleur bleu foncé */
+    font-weight: 500; /* Texte en gras */
 }
 
-/* ==========================
+/* =============================================
    CONTACT SECTION
-========================== */
+   ============================================= */
 .contact-section {
-    padding: 40px 10%;
-    background-color: #fff;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+    padding: 40px 10%; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    width: 100%; /* Largeur totale */
+    margin: 0 auto; /* Centrage horizontal */
+    box-sizing: border-box; /* Inclut le padding dans la taille */
 }
 
 .contact-title {
-    font-size: 2.5rem;
-    color: #115da9;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Taille du titre */
+    color: #115da9; /* Couleur bleu */
+    font-weight: 700; /* Texte en gras */
+    text-align: center; /* Alignement du texte au centre */
+    margin-bottom: 10px; /* Espacement en bas */
 }
 
 .contact-p {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 40px;
-=======
-    color: #000;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-#background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.menu-btn, .reserver-table-btn {
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    border-radius: 4px;
-}
-
-.menu-btn {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
-}
-
-.reserver-table-btn {
-    background-color: rgba(255, 0, 0, 0.9);
-    color: #fff;
-}
-
-/* Menu Section */
-.menu-section {
-    background-color: whitesmoke;
-    color: #000;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.menu-title {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #003366;
-}
-
-.menu-subtitle {
-    margin-bottom: 30px;
-    color:black;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Menu Card */
-.menu-card {
-    width: 100%;
-    height: 350px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    cursor: pointer;
-}
-.menu-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.add-button {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(255, 0, 0, 0.625);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.menu-card-info {
-    background: rgba(255, 255, 255, 0.666);
-    padding: 15px;
-    text-align: center;
-    z-index: 1;
-}
-
-.menu-card-info h3 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.menu-card-info .price {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: rgba(255, 0, 0, 0.753);
-}
-
-/* Form */
-.menu-card-form {
-    margin: 0;
-    padding: 0;
-}
-
-/* Autres sections (À propos, Galerie, Contact, etc.) */
-/* Reservation Section */
-.reservation-container {
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 80%;
-    max-width: 700px;
-    padding: 20px;
-    margin: 20px auto;
-}
-
-.reservation-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.reservation-header h1 {
-    color: #003366;
-    border-bottom: 2px solid #ff0000;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.reservation-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="date"],
-.form-group input[type="tel"],
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.form-group textarea {
-    height: 100px;
-}
-
-.confirm-btn {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    grid-column: span 2;
-}
-
-.confirm-btn:hover {
-    background-color: #cc0000;
-}
-
-/* About Section */
-.about-container {
-    background-color: white;
-    color: #000;
-    padding: 40px;
-    max-width: 700px;
-    margin: 20px auto;
-    position: relative;
-    text-align: left;
-    height: auto;
-}
-
-.about-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.red-line {
-    width: 50px;
-    height: 3px;
-    background-color: #ff0000;
-    margin: 0 0 20px 0;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-}
-
-.since-badge {
-    background-color: #ff0000;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.since-badge p:first-child {
-    font-size: 0.8em;
-}
-
-.since-badge p:last-child {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* Gallery Section */
-.gallery-container {
-    background-color: whitesmoke;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.gallery-title {
-    color: #003366;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.gallery-subtitle {
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    background-color: #e7e7e7;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item p {
-    padding: 10px;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-/* Contact Section */
-.contact-section {
-    background-color: rgb(109, 107, 107);
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.contact-title {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.contact-subtitle {
-    margin-bottom: 30px;
-    color: white;
->>>>>>> 71df9fe (Ajout du site web fini)
+    text-align: center; /* Alignement du texte au centre */
+    font-size: 20px; /* Taille du texte */
+    margin-bottom: 40px; /* Espacement en bas */
 }
 
 .contact-container {
-    display: flex;
-<<<<<<< HEAD
-    gap: 50px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: flex; /* Affichage flexible */
+    gap: 50px; /* Espacement entre les éléments */
+    align-items: flex-start; /* Alignement en haut */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
 }
 
 .contact-info {
-=======
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1; /* Largeur flexible */
+    min-width: 300px; /* Largeur minimale */
 }
 
-.contact-info, .contact-map, .contact-form {
-    background-color: #545252;
-    padding: 20px;
-    border-radius: 8px;
->>>>>>> 71df9fe (Ajout du site web fini)
-    flex: 1;
-    min-width: 300px;
-}
-
-<<<<<<< HEAD
 .contact-info h3 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-weight: 600;
+    font-size: 1.8rem; /* Taille du titre */
+    color: #2c3e50; /* Couleur bleu foncé */
+    margin-bottom: 15px; /* Espacement en bas */
+    font-weight: 600; /* Texte en gras */
 }
 
 .contact-info p {
-    color: #555;
-    line-height: 1.6;
+    color: #555; /* Couleur du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
 }
 
 .info-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    display: flex; /* Affichage flexible */
+    align-items: flex-start; /* Alignement en haut */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .info-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    margin-top: 5px;
+    width: 40px; /* Largeur */
+    height: 40px; /* Hauteur */
+    margin-right: 20px; /* Espacement à droite */
+    margin-top: 5px; /* Espacement en haut */
 }
 
 .info-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    object-fit: contain; /* Remplit l'espace */
 }
 
 .info-text p:first-child {
-    font-weight: 600;
-    color: #2c3e50;
-    margin: 0;
+    font-weight: 600; /* Texte en gras */
+    color: #2c3e50; /* Couleur bleu foncé */
+    margin: 0; /* Pas de marge */
 }
 
 .info-text p:last-child {
-    color: #555;
-    margin: 5px 0 0;
+    color: #555; /* Couleur du texte */
+    margin: 5px 0 0; /* Espacement en haut */
 }
 
 .contact-form {
-    flex: 1;
-    min-width: 300px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    flex: 1; /* Largeur flexible */
+    min-width: 300px; /* Largeur minimale */
+    background-color: #fff; /* Fond blanc */
+    padding: 30px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Ombre légère */
 }
 
 .contact-form h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    font-size: 25px; /* Taille du titre */
+    margin-bottom: 20px; /* Espacement en bas */
+    color: #2c3e50; /* Couleur bleu foncé */
 }
 
 .contact-form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .contact-form .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #2c3e50;
+    display: block; /* Affichage en bloc */
+    margin-bottom: 8px; /* Espacement en bas */
+    font-weight: 600; /* Texte en gras */
+    color: #2c3e50; /* Couleur bleu foncé */
 }
 
 .contact-form .form-group input,
 .contact-form .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
+    width: 100%; /* Largeur totale */
+    padding: 12px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille du texte */
 }
 
 .contact-form .form-group textarea {
-    height: 120px;
-    resize: vertical;
+    height: 120px; /* Hauteur fixe */
+    resize: vertical; /* Redimensionnement vertical uniquement */
 }
 
 .submit-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #e74c3c; /* Fond rouge */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 14px 30px; /* Espacement interne */
+    font-size: 16px; /* Taille du texte */
+    font-weight: 600; /* Texte en gras */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s; /* Transition douce */
 }
 
 .submit-button:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* Fond rouge plus foncé au survol */
 }
 
-/* ==========================
-   MODAL STYLES
-========================== */
+/* =============================================
+   MODAL STYLES (Fenêtre modale générique)
+   ============================================= */
 .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+    display: none; /* Masquée par défaut */
+    position: fixed; /* Position fixe */
+    top: 0; /* En haut */
+    left: 0; /* À gauche */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 2000; /* Au-dessus de tout */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
 }
 
 .modal-content {
-    background: white;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 50px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.5s ease-out;
+    background: white; /* Fond blanc */
+    width: 90%; /* Largeur relative */
+    max-width: 500px; /* Largeur maximale */
+    border-radius: 50px; /* Forme ovale */
+    padding: 2rem; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    animation: fadeIn 0.5s ease-out; /* Animation d'apparition */
 }
 
 .modal-icon {
-    font-size: 3rem;
-    color: #2ECC71;
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Taille de l'icône */
+    color: #2ECC71; /* Couleur verte */
+    margin-bottom: 1rem; /* Espacement en bas */
 }
 
 .modal-title {
-    color: #2c3e50;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: #2c3e50; /* Couleur bleu foncé */
+    font-size: 1.5rem; /* Taille du titre */
+    margin-bottom: 1rem; /* Espacement en bas */
 }
 
 .modal-text {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    color: #555; /* Couleur du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 1.5rem; /* Espacement en bas */
 }
 
 .modal-btn {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    background: #3498db; /* Fond bleu */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 0.7rem 1.5rem; /* Espacement interne */
+    border-radius: 25px; /* Coins arrondis */
+    font-size: 1rem; /* Taille du texte */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background 0.3s; /* Transition douce */
 }
 
 .modal-btn:hover {
-    background: #2980b9;
+    background: #2980b9; /* Fond bleu plus foncé au survol */
 }
 
+/* Animation pour la modale */
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.9); } /* Début : invisible et réduit */
+    to { opacity: 1; transform: scale(1); } /* Fin : visible et taille normale */
 }
 
-/* ==========================
+/* =============================================
    FOOTER
-========================== */
+   ============================================= */
 .footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 40px 20px 20px;
+    background-color: #2c3e50; /* Fond bleu foncé */
+    color: #fff; /* Texte blanc */
+    padding: 40px 20px 20px; /* Espacement interne */
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    display: flex; /* Affichage flexible */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+    justify-content: space-between; /* Espacement entre les éléments */
+    gap: 30px; /* Espacement entre les éléments */
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
+    flex: 1; /* Largeur flexible */
+    min-width: 200px; /* Largeur minimale */
+    margin-bottom: 20px; /* Espacement en bas */
 }
 
 .footer-column h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #fff;
+    font-size: 18px; /* Taille du titre */
+    margin-bottom: 15px; /* Espacement en bas */
+    font-weight: 600; /* Texte en gras */
+    color: #fff; /* Texte blanc */
 }
 
 .footer-column p {
-    color: #bdc3c7;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    color: #bdc3c7; /* Couleur du texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 10px; /* Espacement en bas */
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
 }
 
 .footer-column ul li {
-    margin-bottom: 8px;
-    color: #bdc3c7;
-=======
-.contact-info h2 {
-    color: #fff;
-    text-align: left;
-    margin-top: 20px;
-    border-bottom: 1px solid #555;
-    padding-bottom: 10px;
-}
-
-.contact-info p {
-    text-align: left;
-    margin: 5px 0;
->>>>>>> 71df9fe (Ajout du site web fini)
+    margin-bottom: 8px; /* Espacement en bas */
+    color: #bdc3c7; /* Couleur du texte */
 }
 
 .social-icons {
-    display: flex;
-<<<<<<< HEAD
-    gap: 15px;
-    margin-top: 15px;
+    display: flex; /* Affichage flexible */
+    gap: 15px; /* Espacement entre les icônes */
+    margin-top: 15px; /* Espacement en haut */
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s;
+    color: #fff; /* Texte blanc */
+    font-size: 20px; /* Taille des icônes */
+    transition: color 0.3s; /* Transition douce */
 }
 
 .social-icons a:hover {
-    color: #00bfff;
+    color: #00bfff; /* Couleur bleue au survol */
 }
 
 .copyright {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-    color: white;
-    font-size: 14px;
+    text-align: center; /* Alignement du texte au centre */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Bordure en haut */
+    padding-top: 20px; /* Espacement en haut */
+    color: white; /* Texte blanc */
+    font-size: 14px; /* Taille du texte */
 }
 
-/* ==========================
+/* =============================================
    RESPONSIVE DESIGN
-========================== */
+   ============================================= */
 /* TABLETTES (≤ 768px) */
 @media (max-width: 768px) {
     header {
-        padding: 12px 3%;
-        flex-direction: column;
-        gap: 15px;
+        padding: 12px 3%; /* Espacement interne réduit */
+        flex-direction: column; /* Affichage en colonne */
+        gap: 15px; /* Espacement entre les éléments */
     }
-    .logo h1 { font-size: 20px; }
+    .logo h1 { font-size: 20px; } /* Taille du texte réduite */
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+        justify-content: center; /* Centrage horizontal */
     }
-    nav ul li { margin: 5px 10px; }
+    nav ul li { margin: 5px 10px; } /* Espacement réduit */
     .header-actions {
-        width: 100%;
-        justify-content: center;
-        gap: 10px;
+        width: 100%; /* Largeur totale */
+        justify-content: center; /* Centrage horizontal */
+        gap: 10px; /* Espacement réduit */
     }
     .cta-button1, .cta-button {
-        padding: 8px 12px;
-        font-size: 13px;
+        padding: 8px 12px; /* Espacement interne réduit */
+        font-size: 13px; /* Taille du texte réduite */
     }
-
     /* Slideshow */
-    .hero-content h2 { font-size: 2.5rem; }
-    .hero-content p { font-size: 1.1rem; }
-
+    .hero-content h2 { font-size: 2.5rem; } /* Taille du texte réduite */
+    .hero-content p { font-size: 1.1rem; } /* Taille du texte réduite */
     /* Galerie */
     .galerie-projets {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+        gap: 15px; /* Espacement réduit */
     }
     .carte-projet {
-        height: 400px;
-        max-width: 400px;
+        height: 400px; /* Hauteur réduite */
+        max-width: 400px; /* Largeur maximale */
     }
-    .infos-projet h3 { font-size: 1.5rem; }
-
+    .infos-projet h3 { font-size: 1.5rem; } /* Taille du texte réduite */
     /* Carrousel */
-    .carousel-track { gap: 15px; }
+    .carousel-track { gap: 15px; } /* Espacement réduit */
     .card {
-        flex: 0 0 280px;
-        height: 300px;
+        flex: 0 0 280px; /* Largeur réduite */
+        height: 300px; /* Hauteur réduite */
     }
-
     /* Histoire */
     .history-section {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Affichage en colonne */
+        text-align: center; /* Alignement du texte au centre */
     }
-    .history-stats { flex: none; width: 100%; }
+    .history-stats { flex: none; width: 100%; } /* Largeur totale */
     .stats-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr; /* 1 colonne */
+        gap: 20px; /* Espacement entre les éléments */
     }
-
     /* Contact */
-    .contact-container { flex-direction: column; }
-    .contact-title { font-size: 2rem; }
+    .contact-container { flex-direction: column; } /* Affichage en colonne */
+    .contact-title { font-size: 2rem; } /* Taille du texte réduite */
 }
 
 /* MOBILES (≤ 480px) */
 @media (max-width: 480px) {
     .logo img {
-        width: 50px;
-        height: 60px;
+        width: 50px; /* Largeur réduite */
+        height: 60px; /* Hauteur réduite */
     }
-    nav ul li a { font-size: 15px; }
-
+    nav ul li a { font-size: 15px; } /* Taille du texte réduite */
     /* Slideshow */
-    .hero-content h2 { font-size: 2rem; }
+    .hero-content h2 { font-size: 2rem; } /* Taille du texte réduite */
     .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Affichage en colonne */
+        align-items: center; /* Centrage horizontal */
     }
     .button {
-        width: 80%;
-        margin: 5px 0;
+        width: 80%; /* Largeur relative */
+        margin: 5px 0; /* Espacement vertical */
     }
-
     /* Galerie */
-    .galerie-projets { grid-template-columns: 1fr; }
+    .galerie-projets { grid-template-columns: 1fr; } /* 1 colonne */
     .carte-projet {
-        height: 200px;
-        max-width: 100%;
+        height: 200px; /* Hauteur réduite */
+        max-width: 100%; /* Largeur totale */
     }
-
     /* Carrousel */
     .card {
-        flex: 0 0 220px;
-        height: 250px;
+        flex: 0 0 220px; /* Largeur réduite */
+        height: 250px; /* Hauteur réduite */
     }
     @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
+        0% { transform: translateX(0); } /* Début : position initiale */
+        100% { transform: translateX(-100%); } /* Fin : défilement total */
     }
-
     /* Formulaire */
-    .contact-form { padding: 20px; }
+    .contact-form { padding: 20px; } /* Espacement interne réduit */
     .form-group input,
-    .form-group textarea { padding: 10px; }
-
+    .form-group textarea { padding: 10px; } /* Espacement interne réduit */
     /* Footer */
-    .footer-content { flex-direction: column; text-align: center; }
-    .footer-column { margin-bottom: 20px; }
-=======
-    gap: 10px;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-}
-
-.contact-map iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    border-radius: 8px;
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.submit-btn {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit-btn:hover {
-    background-color: #cc0000;
-}
-
-/* Footer */
-.footer {
-    background-color: rgb(109, 107, 107);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-logo img {
-    width: 50px;
-    height: 50px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-location {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reservation-form {
-        grid-template-columns: 1fr;
-    }
->>>>>>> 71df9fe (Ajout du site web fini)
+    .footer-content { flex-direction: column; text-align: center; } /* Affichage en colonne et centrage */
+    .footer-column { margin-bottom: 20px; } /* Espacement en bas */
 }

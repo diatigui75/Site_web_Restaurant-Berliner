@@ -1,295 +1,345 @@
- /* Reset CSS */
+/* Reset CSS : Réinitialise les marges, paddings et box-sizing pour tous les éléments */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;          /* Supprime les marges par défaut */
+    padding: 0;         /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur/taille totale */
 }
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .grand_section {
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 10px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        header h1 {
-            color: #ff6b00;
-            font-size: 24px;
-        }
-        header p {
-            color: #666;
-            font-size: 14px;
-        }
-        .panier-btn {
-            background-image: url('../Dossier_images/panier.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            float: right;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            color: #ff6b00;
-            margin-bottom: 10px;
-            font-size: 18px;
-            text-align: left;
-        }
-        .selected {
-            background-color: #ff6a0086;
-        }
-        .kebab-options, .side-options, .drink-options, .extra-options, .sauce-options, .sauce-kebab-options, .sauce-frites-options, .frites-options {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        .kebab-option, .side-option, .drink-option, .extra-option, .sauce-option, .frites-option {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            background-color: white;
-            cursor: pointer;
-        }
-        .kebab-option h3, .side-option h3, .drink-option h3, .extra-option h3, .sauce-option h3, .frites-option h3 {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .drink-options {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        }
 
-        .drink-option {
-            flex: 1 1 calc(50% - 10px);
-            max-width: calc(50% - 10px);
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            text-align: center;
-            background-color: white;
-            cursor: pointer;
-        }
-         .extra-options {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        }
+/* Style général pour le body */
+body {
+    font-family: Arial, sans-serif; /* Police par défaut */
+    margin: 0;                      /* Supprime les marges */
+    padding: 0;                     /* Supprime les paddings */
+    background-color: #f5f5f5;      /* Couleur de fond */
+}
 
-        .extra-option {
-            flex: 1 1 calc(50% - 10px);
-            max-width: calc(50% - 10px);
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            text-align: center;
-            background-color: white;
-            cursor: pointer;
-        }
+/* Style pour la section principale */
+.grand_section {
+    text-align: center; /* Alignement du texte au centre */
+}
 
-        .commentaire {
-            margin-top: 6px;
-            padding: 10px;
-            background-color: white;
-            border-left: 4px solid #ff6600;
-            font-style: italic;
-            color: black;
-            border-radius: 4px;
-            font-size: 14px;
-            vertical-align: top;
-            width: 60%;
-            box-sizing: border-box;
-        }
-        .option-content {
-            flex: 1;
-            text-align: left;
-        }
-        .price {
-            font-size: 15px;
-        }
-        input[type="radio"], input[type="checkbox"] {
-            margin-top: 5px;
-        }
-        .total {
-            text-align: center;
-            margin-top: 15px;
-        }
-        .total p {
-            font-size: 20px;
-            font-weight: bold;
-            color: #ff6b00;
-        }
-        .total button {
-            background-color: #ff6b00;
-            color: white;
-            border: none;
-            border-radius: 1px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .total button:hover {
-            background-color: #e65e00;
-        }
-        .total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-            padding: 0 10px;
-        }
-        .total-row p {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
-        .total-row button {
-            background-color: #ff6b00;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .total-row button:hover {
-            background-color: #e65e00;
-        }
-        .cart-summary {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .cart-item:last-child {
-            border-bottom: none;
-        }
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 500px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-        .modal-content .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #999;
-        }
-        h3 {
-            text-align: center;
-            color: #e65e00;
-            font-size: 25px;
-        }
-        .cart-item {
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-        }
-        .cart-item p {
-            margin: 8px 0;
-        }
-        .cart-item strong {
-            color: #e65e00;
-        }
-        .quantity-controls {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-        }
-        .quantity-controls button {
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            width: 30px;
-            height: 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        .quantity-controls input {
-            width: 50px;
-            text-align: center;
-            margin: 0 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .btn-remove {
-            background-color: #ff4444;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        .cart-total {
-            text-align: right;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 15px;
-            color: #ff6600;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            .resume-panier-container,
-            .modal-content {
-                width: 95%;
-                margin: 10px auto;
-            }
-        }
-        .selected {
-            background-color: #ff6a0086;
-        }
+/* Style pour le conteneur principal */
+.container {
+    max-width: 800px;                /* Largeur maximale */
+    margin: 0 auto;                  /* Centrage horizontal */
+    padding: 10px;                   /* Espacement interne */
+    background-color: white;         /* Fond blanc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
+/* Style pour l'en-tête */
+header {
+    text-align: center; /* Alignement du texte au centre */
+    margin-bottom: 40px; /* Espacement en bas */
+}
+header h1 {
+    color: #ff6b00; /* Couleur orange pour le titre */
+    font-size: 24px; /* Taille de la police */
+}
+header p {
+    color: #666; /* Couleur grise pour le texte */
+    font-size: 14px; /* Taille de la police */
+}
 
-            .resume-panier-container,
-            .modal-content {
-                width: 95%;
-                margin: 10px auto;
-            }
-        }
+/* Style pour le bouton panier */
+.panier-btn {
+    background-image: url('../Dossier_images/panier.png'); /* Image de fond */
+    background-size: contain; /* Ajuste la taille de l'image */
+    background-repeat: no-repeat; /* Pas de répétition */
+    width: 60px; /* Largeur */
+    height: 60px; /* Hauteur */
+    cursor: pointer; /* Curseur en forme de main */
+    float: right; /* Alignement à droite */
+}
+
+/* Style pour les sections */
+.section {
+    margin-bottom: 20px; /* Espacement en bas */
+}
+.section h2 {
+    color: #ff6b00; /* Couleur orange pour les titres de section */
+    margin-bottom: 10px; /* Espacement en bas */
+    font-size: 18px; /* Taille de la police */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style pour les éléments sélectionnés */
+.selected {
+    background-color: #ff6a0086; /* Couleur de fond pour les éléments sélectionnés */
+}
+
+/* Style pour les grilles d'options (kebab, accompagnements, boissons, etc.) */
+.kebab-options, .side-options, .drink-options, .extra-options, .sauce-options, .sauce-kebab-options, .sauce-frites-options, .frites-options {
+    display: grid; /* Affichage en grille */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de même taille */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Style pour les options (kebab, accompagnements, etc.) */
+.kebab-option, .side-option, .drink-option, .extra-option, .sauce-option, .frites-option {
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    background-color: white; /* Fond blanc */
+    cursor: pointer; /* Curseur en forme de main */
+}
+.kebab-option h3, .side-option h3, .drink-option h3, .extra-option h3, .sauce-option h3, .frites-option h3 {
+    margin: 5px 0; /* Espacement vertical */
+    font-size: 14px; /* Taille de la police */
+}
+
+/* Style spécifique pour les options de boissons */
+.drink-options {
+    display: flex; /* Affichage flexible */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+    justify-content: center; /* Centrage horizontal */
+    gap: 10px; /* Espacement entre les éléments */
+}
+.drink-option {
+    flex: 1 1 calc(50% - 10px); /* Largeur flexible */
+    max-width: calc(50% - 10px); /* Largeur maximale */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    background-color: white; /* Fond blanc */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+/* Style spécifique pour les options supplémentaires */
+.extra-options {
+    display: flex; /* Affichage flexible */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+    justify-content: center; /* Centrage horizontal */
+    gap: 10px; /* Espacement entre les éléments */
+}
+.extra-option {
+    flex: 1 1 calc(50% - 10px); /* Largeur flexible */
+    max-width: calc(50% - 10px); /* Largeur maximale */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    text-align: center; /* Alignement du texte au centre */
+    background-color: white; /* Fond blanc */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+/* Style pour les commentaires */
+.commentaire {
+    margin-top: 6px; /* Espacement en haut */
+    padding: 10px; /* Espacement interne */
+    background-color: white; /* Fond blanc */
+    border-left: 4px solid #ff6600; /* Bordure gauche orange */
+    font-style: italic; /* Texte en italique */
+    color: black; /* Couleur du texte */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police */
+    vertical-align: top; /* Alignement vertical en haut */
+    width: 60%; /* Largeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+/* Style pour le contenu des options */
+.option-content {
+    flex: 1; /* Largeur flexible */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style pour les prix */
+.price {
+    font-size: 15px; /* Taille de la police */
+}
+
+/* Style pour les inputs radio et checkbox */
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 5px; /* Espacement en haut */
+}
+
+/* Style pour la section totale */
+.total {
+    text-align: center; /* Alignement du texte au centre */
+    margin-top: 15px; /* Espacement en haut */
+}
+.total p {
+    font-size: 20px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    color: #ff6b00; /* Couleur orange */
+}
+.total button {
+    background-color: #ff6b00; /* Fond orange */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 1px; /* Coins légèrement arrondis */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur en forme de main */
+    margin-top: 10px; /* Espacement en haut */
+}
+.total button:hover {
+    background-color: #e65e00; /* Fond orange plus foncé au survol */
+}
+
+/* Style pour la ligne totale */
+.total-row {
+    display: flex; /* Affichage flexible */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Centrage vertical */
+    margin-top: 20px; /* Espacement en haut */
+    padding: 0 10px; /* Espacement interne horizontal */
+}
+.total-row p {
+    font-size: 18px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Pas de marge */
+}
+.total-row button {
+    background-color: #ff6b00; /* Fond orange */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur en forme de main */
+}
+.total-row button:hover {
+    background-color: #e65e00; /* Fond orange plus foncé au survol */
+}
+
+/* Style pour le résumé du panier */
+.cart-summary {
+    margin-top: 20px; /* Espacement en haut */
+    padding: 15px; /* Espacement interne */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Fond gris clair */
+}
+
+/* Style pour les éléments du panier */
+.cart-item:last-child {
+    border-bottom: none; /* Pas de bordure en bas pour le dernier élément */
+}
+
+/* Style pour la modale */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Position fixe */
+    top: 0; /* En haut de la page */
+    left: 0; /* À gauche de la page */
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 1000; /* Au-dessus des autres éléments */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+}
+.modal-content {
+    background-color: white; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    max-width: 500px; /* Largeur maximale */
+    width: 90%; /* Largeur relative */
+    max-height: 80vh; /* Hauteur maximale */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
+    position: relative; /* Position relative */
+}
+.modal-content .close {
+    position: absolute; /* Position absolue */
+    top: 10px; /* En haut */
+    right: 15px; /* À droite */
+    font-size: 24px; /* Taille de la police */
+    cursor: pointer; /* Curseur en forme de main */
+    color: #999; /* Couleur grise */
+}
+
+/* Style pour les titres h3 */
+h3 {
+    text-align: center; /* Alignement du texte au centre */
+    color: #e65e00; /* Couleur orange */
+    font-size: 25px; /* Taille de la police */
+}
+
+/* Style pour les éléments du panier */
+.cart-item {
+    border-bottom: 1px solid #eee; /* Bordure en bas */
+    padding: 15px 0; /* Espacement interne vertical */
+}
+.cart-item p {
+    margin: 8px 0; /* Espacement vertical */
+}
+.cart-item strong {
+    color: #e65e00; /* Couleur orange pour le texte en gras */
+}
+
+/* Style pour les contrôles de quantité */
+.quantity-controls {
+    display: flex; /* Affichage flexible */
+    align-items: center; /* Centrage vertical */
+    margin: 10px 0; /* Espacement vertical */
+}
+.quantity-controls button {
+    background-color: #f0f0f0; /* Fond gris clair */
+    border: 1px solid #ddd; /* Bordure légère */
+    width: 30px; /* Largeur */
+    height: 30px; /* Hauteur */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 18px; /* Taille de la police */
+}
+.quantity-controls input {
+    width: 50px; /* Largeur */
+    text-align: center; /* Alignement du texte au centre */
+    margin: 0 10px; /* Espacement horizontal */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Style pour le bouton de suppression */
+.btn-remove {
+    background-color: #ff4444; /* Fond rouge */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px 10px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 12px; /* Taille de la police */
+}
+
+/* Style pour le total du panier */
+.cart-total {
+    text-align: right; /* Alignement du texte à droite */
+    font-size: 18px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 15px; /* Espacement en haut */
+    color: #ff6600; /* Couleur orange */
+}
+
+/* Style pour les écrans de taille réduite */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Espacement interne réduit */
+    }
+    .resume-panier-container,
+    .modal-content {
+        width: 95%; /* Largeur relative */
+        margin: 10px auto; /* Centrage horizontal avec marge */
+    }
+}
+
+/* Style pour les éléments sélectionnés */
+.selected {
+    background-color: #ff6a0086; /* Couleur de fond pour les éléments sélectionnés */
+}
+
+/* Style pour les écrans de taille réduite */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Espacement interne réduit */
+    }
+    .resume-panier-container,
+    .modal-content {
+        width: 95%; /* Largeur relative */
+        margin: 10px auto; /* Centrage horizontal avec marge */
+    }
+}

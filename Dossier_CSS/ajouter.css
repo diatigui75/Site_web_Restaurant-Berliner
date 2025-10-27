@@ -1,64 +1,101 @@
-/* ajouter.css */
-
+/* ====== Style global du document ====== */
 body {
+    /* Police générale utilisée sur la page */
     font-family: Arial, sans-serif;
+    /* Couleur de fond gris clair */
     background-color: #f4f4f4;
+    /* Supprime les marges par défaut du navigateur */
     margin: 0;
+    /* Ajoute de l’espace autour du contenu */
     padding: 20px;
 }
 
+/* ====== Style du titre principal ====== */
 h1 {
+    /* Couleur du texte du titre */
     color: #333;
+    /* Centre le texte horizontalement */
     text-align: center;
 }
 
+/* ====== Conteneur principal du formulaire ====== */
 .reservation-form {
+    /* Largeur maximale du bloc */
     max-width: 600px;
+    /* Centre le formulaire horizontalement */
     margin: 0 auto;
+    /* Couleur de fond blanche */
     background: #fff;
+    /* Espacement interne du contenu */
     padding: 20px;
+    /* Coins arrondis */
     border-radius: 8px;
+    /* Ombre légère autour du bloc */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ====== Sous-titre du formulaire ====== */
 .reservation-form h2 {
+    /* Supprime la marge supérieure par défaut */
     margin-top: 0;
+    /* Couleur du texte */
     color: #333;
 }
 
+/* ====== Mise en forme générale du formulaire ====== */
 .reservation-form form {
+    /* Organise les éléments en colonne (de haut en bas) */
     display: flex;
     flex-direction: column;
 }
 
+/* ====== Styles communs aux champs de saisie, zone de texte et bouton ====== */
 .reservation-form input,
 .reservation-form textarea,
 .reservation-form button {
+    /* Espacement en bas de chaque élément */
     margin-bottom: 15px;
+    /* Espace interne du contenu */
     padding: 10px;
+    /* Bordure grise légère */
     border: 1px solid #ccc;
+    /* Coins légèrement arrondis */
     border-radius: 4px;
 }
 
+/* ====== Effet visuel lors du focus sur un champ ====== */
 .reservation-form input:focus,
 .reservation-form textarea:focus {
+    /* Change la couleur de bordure lors du focus */
     border-color: #007BFF;
+    /* Supprime le contour par défaut du navigateur */
     outline: none;
 }
 
+/* ====== Style du bouton d’envoi ====== */
 .reservation-form button {
+    /* Couleur de fond bleue */
     background-color: #007BFF;
+    /* Couleur du texte blanche */
     color: white;
+    /* Supprime la bordure par défaut */
     border: none;
+    /* Change le curseur au survol */
     cursor: pointer;
+    /* Taille du texte */
     font-size: 16px;
 }
 
+/* ====== Effet de survol sur le bouton ====== */
 .reservation-form button:hover {
+    /* Fonce légèrement la couleur du bouton */
     background-color: #0056b3;
 }
 
+/* ====== Style spécifique à la zone de texte ====== */
 .reservation-form textarea {
+    /* Permet de redimensionner verticalement seulement */
     resize: vertical;
+    /* Hauteur minimale */
     min-height: 100px;
 }

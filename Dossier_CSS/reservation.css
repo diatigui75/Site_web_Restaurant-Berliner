@@ -1,116 +1,114 @@
- body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
+/* Style général pour le body */
+body {
+    font-family: 'Arial', sans-serif; /* Police par défaut */
+    background-color: #f5f5f5; /* Couleur de fond gris clair */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 20px; /* Espacement interne */
+    color: #333; /* Couleur du texte */
+}
 
-        h1, h2 {
-            color: #2c3e50;
-        }
+/* Style pour les titres h1 et h2 */
+h1, h2 {
+    color: #2c3e50; /* Couleur bleu foncé pour les titres */
+}
+h1 {
+    text-align: center; /* Alignement du texte au centre */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+h2 {
+    margin: 25px 0 15px 0; /* Espacement vertical */
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* Style pour le formulaire de réservation */
+.reservation-form {
+    max-width: 600px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement interne */
+    background: #fff; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Espacement en bas */
+}
 
-        h2 {
-            margin: 25px 0 15px 0;
-        }
+/* Style pour les labels du formulaire */
+.reservation-form label {
+    display: block; /* Affichage en bloc */
+    margin-top: 15px; /* Espacement en haut */
+    font-weight: bold; /* Texte en gras */
+}
 
-        .reservation-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+/* Style pour les champs de saisie du formulaire */
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form input[type="number"],
+.reservation-form textarea {
+    width: calc(100% - 22px); /* Largeur relative (moins le padding) */
+    padding: 10px; /* Espacement interne */
+    margin-top: 5px; /* Espacement en haut */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+}
 
-        .reservation-form label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+/* Style pour le bouton de soumission du formulaire */
+.reservation-form input[type="submit"] {
+    background-color: #3498db; /* Fond bleu */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 12px 20px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    width: 100%; /* Largeur totale */
+    margin-top: 20px; /* Espacement en haut */
+    transition: background-color 0.3s; /* Animation de transition */
+}
+.reservation-form input[type="submit"]:hover {
+    background-color: #2980b9; /* Fond bleu plus foncé au survol */
+}
 
-        .reservation-form input[type="text"],
-        .reservation-form input[type="email"],
-        .reservation-form input[type="date"],
-        .reservation-form input[type="time"],
-        .reservation-form input[type="number"],
-        .reservation-form textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
+/* Style pour les tableaux */
+table {
+    width: 100%; /* Largeur totale */
+    margin: 20px auto; /* Centrage horizontal avec marge */
+    border-collapse: collapse; /* Fusion des bordures */
+    background: #fff; /* Fond blanc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+table th, table td {
+    padding: 12px 15px; /* Espacement interne */
+    text-align: left; /* Alignement du texte à gauche */
+    border-bottom: 1px solid #ddd; /* Bordure en bas */
+}
+table th {
+    background-color: #3498db; /* Fond bleu pour les en-têtes */
+    color: white; /* Texte blanc */
+    font-weight: bold; /* Texte en gras */
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fond gris clair pour les lignes paires */
+}
+table tr:hover {
+    background-color: #e3f2fd; /* Fond bleu clair au survol */
+}
 
-        .reservation-form input[type="submit"] {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .reservation-form input[type="submit"]:hover {
-            background-color: #2980b9;
-        }
-
-        table {
-            width: 100%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        table th, table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        table th {
-            background-color: #3498db;
-            color: white;
-            font-weight: bold;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        table tr:hover {
-            background-color: #e3f2fd;
-        }
-
-        .action-buttons button {
-            padding: 5px 10px;
-            margin: 0 5px;
-            border-radius: 3px;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .edit-button {
-            background-color: #2ecc71;
-        }
-
-        .delete-button {
-            background-color: #e74c3c;
-        }
-
-        .action-buttons button:hover {
-            opacity: 0.8;
-        }
+/* Style pour les boutons d'action (éditer/supprimer) */
+.action-buttons button {
+    padding: 5px 10px; /* Espacement interne */
+    margin: 0 5px; /* Espacement horizontal */
+    border-radius: 3px; /* Coins arrondis */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur en forme de main */
+}
+.edit-button {
+    background-color: #2ecc71; /* Fond vert pour le bouton "Éditer" */
+}
+.delete-button {
+    background-color: #e74c3c; /* Fond rouge pour le bouton "Supprimer" */
+}
+.action-buttons button:hover {
+    opacity: 0.8; /* Réduction de l'opacité au survol */
+}
